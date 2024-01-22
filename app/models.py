@@ -10,6 +10,9 @@ class Restaurant(db.Model):
     address = db.Column(db.String)
     pizzas = db.relationship('Pizza', secondary='restaurant_pizzas')
 
+
+
+
 class Pizza(db.Model):
     __tablename__ = 'pizzas'
     id = db.Column(db.Integer, primary_key=True)
